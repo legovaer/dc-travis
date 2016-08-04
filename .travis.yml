@@ -1,0 +1,71 @@
+language: php
+sudo: true
+php:
+- 5.6
+
+cache:
+  bundler: true
+  apt: true#
+  directories:
+  - "$HOME/.composer/cache"
+  - "$HOME/.drush/cache"
+
+matrix:
+  fast_finish: true
+env:
+  global:
+  - PATH="$PATH:$HOME/.composer/vendor/bin"
+  - DRUPAL_TI_MODULE_NAME="scheduler"
+  - DRUPAL_TI_SIMPLETEST_GROUP="Scheduler"
+  - DRUPAL_TI_ENVIRONMENT="drupal-7"
+  - DRUPAL_TI_DB="drupal_travis_db"
+  - DRUPAL_TI_DB_URL="mysql://root:@127.0.0.1/drupal_travis_db"
+  - DRUPAL_TI_WEBSERVER_URL="http://127.0.0.1"
+  - DRUPAL_TI_WEBSERVER_PORT="8080"
+  - DRUPAL_TI_SIMPLETEST_ARGS="--verbose --color --concurrency 4 --url $DRUPAL_TI_WEBSERVER_URL:$DRUPAL_TI_WEBSERVER_PORT"
+  - DRUPAL_TI_BEHAT_DIR="./tests/behat"
+  - DRUPAL_TI_BEHAT_ARGS=""
+  - DRUPAL_TI_BEHAT_YML="behat.yml.dist"
+  - DRUPAL_TI_BEHAT_SCREENSIZE_COLOR="1280x1024x16"
+  - DRUPAL_TI_BEHAT_SELENIUM_VERSION="2.48.2"
+  - DRUPAL_TI_BEHAT_DRIVER="phantomjs"
+  - DRUPAL_TI_BEHAT_BROWSER="firefox"
+  - DRUPAL_TI_PHPUNIT_ARGS=""
+  - DRUPAL_TI_COVERAGE="satooshi/php-coveralls:0.6.*"
+  - DRUPAL_TI_COVERAGE_FILE="build/logs/clover.xml"
+  - DRUPAL_TI_SIMPLETEST_COVERAGE="0"
+  - DRUPAL_TI_SIMPLETEST_COVERAGE_GENERATE_BADGES="1"
+  - secure: "IeXlB0B1BRKU2WN5N2LWkH772vUD+hPNDu9+gjfXaKEU4uXaCp4tDmtgD+dhqo4xT72KK1+LEBPRnGevQ4D4Af7Ej6UyopnC7mwVT6T+zCOYodflqOd1w5HB8tOK1o/pzF7dBb+aHpFvI9jwgXXuXcX/me/iyWjnQtnlqDXoVx5W7JXmh0judwxEe5+0YEqDpT0Zs/xeV9zLZ1iYSoK9C03+5stKUhsej8KS6lCJXcaNMNF7COR0xXI4IUu412/FrKvaBOqfV4qSOVBg4qWu47U7RKb2ofJgNx48GxG686rNjEV4K/p/IUJrW2g/j9QKnQ1an6cSED1mj2Y0Vafg/dxs79ZS9p7C62BiL/2tuUH1JU7K+C8adfqnmWU539w1yAIFoWpRY1++gDLIJ4yJyDZ3n+XtulLywCNYLUatQFs7nSkZhihM3DO7plgC9SdoiwVXTEu9rQzzsSePYlZTGrRUpfilv9JBY1gWZob+S7FYo4f1YvX9wBWZRqWnMrdVhCNBqcQs5v/Iqvq3ePDcMdTEgBXsnNUQBKotnD+kFumsWLxZ1eadRfInBa0e2dszvO/fxt/O3OocSihV8+ZtQIGz6iFkodzwVacTjT6+lrVAMAtYDYudRpsqzgGb6AIEgWm4tLxyyU+OlSjtGIqoEL1o/lKnd/bawwp1SnzkaX8="
+  - secure: "EzJ7COzG+rDuu1arbfjnGstP3hQjRhjLeRoPwcYIGsBK9m5bAXWJNRLIySyG7cAGzfYDzmrNMqsCyeB+LoYJL0zKmjd8tsqm6as+noLMZ8s2ewZTO9VBI3AFiyNU1vznOp0xqlvmiCjM8NN8QRvLxq8MCpnSS0iJAS7AxwKrI+0iExovbUdmkgJew2/MCDBwzf7DrJsAkh74hMA6xVft9AWs1iXJie9x4Vujq0cj72n0kVvgvN9gizJXej66RtP8W8ySDNHR/yy+cD1uno63Gue246cagJ1guJdH5fIZut27YJL2Ypv197u+aq4cP2SEEkx49KiPXzRoOFlzb5uwq1nEC1XPyyXvXmVbUSYIAFHeT7fpvZcWRVzOxIOtn3eSwAyk+sy1dc17bPV7m/uNAuXqU4PFQeQCs98P0sprUKJnDi5pUw/adBlw+fARMp4KGZ5mSXh029kN+oBrgB6kokEw8mdya5ckACUbye6wThDwwI67r7z6KnGhOWTL9hqvTNBim1cIjxO5mZ7UnSh2P/lEMnumwTlOGZBhu5BEHetcTUJmOLs1JmC6MOc8TYV0wkymCUFgrzNc/DBFQAQSQ58mWIKO4qWf95aV7eQydUZI/4S0Zyk9t/diR8tHNqllGq82LvFmehhi+aPyODLeeDUMHWXO2Vl10oYlVGung/E="
+  - secure: "rTYypY9DF5/D9SHTt3ZABrHRAiesykFxUKM54N3kyHUtYlzswKgCRoWWirDrz8idfntkcuT1Mv1+uAYjkLR0ZPFQWmXwzT3S18lVLXxrWR6KCNvTqS6LDXwDQCJFsSgHjWQsRrVJ+d8xUVcnVr4IyBNJA6TQ3TaTpkB8RU1bdTEbJIItYIsPf4AY08Wsfn8Ef7LyzJWKuv/rXkFt5INvKPGjTkq5o83RWcU573Te0jUseCmIPj+HUBIOY3knrD/TxYWkvlT/K9GGrX2KUPGZNL+JtiEloWoXyW/Fz1wWZjU01otXiEvmvKoPRh9lH4OxH3rKnzGg0EzOoSsWPXWyyGPVoe8UW3itFqZj4oi1x9IUvzSLLTrrjxnGic4K8tWZOnCi5eTNk9YRmFwid15AtBo6OD0YgN7n6oIXM0/zwRiaTOMqSIwQaZbzM4UsqOhLi0HJTXpJ8GHt+YAB4aTgfz5tRaQGEtw7vMiq7X8gw6WhFnQ8nZH+cuHuR3wSPigIjfD1prGYRUth0jygQH0NtcVolP3v9ugebwHR2lMugqMX3fx2i6Dhi0OyvNaWgJnWFKs8hWKpbk4AZyy7uFG408Cta9PUwF3tqpq+V6AvFXPVE++E+PNIVXqRiKEiXH2y9DKUzZm4B9DEXvKTwCZmHvsfLiOSTg7ezFPb8t4KiNA="
+
+  matrix:
+  - DRUPAL_TI_RUNNERS="simpletest"
+mysql:
+  database: drupal_travis_db
+  username: root
+  encoding: utf8
+before_install:
+- composer self-update
+# Installing drupal_ti manually as my pull request hasn't been merged yet.
+- mkdir -p "$HOME/.composer/vendor/bin"
+- cd $HOME
+- git clone --branch travis-add-coverage-support https://github.com/legovaer/drupal_ti
+- cd drupal_ti/
+- composer install
+- ln -sf $HOME/drupal_ti/drupal-ti "$HOME/.composer/vendor/bin"
+- git clone --branch 7.x-1.x https://git.drupal.org/project/scheduler.git $TRAVIS_BUILD_DIR
+- cd $TRAVIS_BUILD_DIR/tests
+- drupal-ti --include "$TRAVIS_BUILD_DIR/drupal_ti/before/before_install.sh"
+- drupal-ti before_install
+install:
+- drupal-ti install
+before_script:
+- drupal-ti --include "$TRAVIS_BUILD_DIR/drupal_ti/before/before_script.sh"
+- drupal-ti before_script
+script:
+- drupal-ti script
+after_script:
+- drupal-ti after_script
+notifications:
+  email: false
