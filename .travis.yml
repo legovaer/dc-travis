@@ -54,8 +54,8 @@ before_install:
 - cd drupal_ti/
 - composer install
 - ln -sf $HOME/drupal_ti/drupal-ti "$HOME/.composer/vendor/bin"
-- git clone --branch 7.x-1.x https://git.drupal.org/project/scheduler.git $TRAVIS_BUILD_DIR
-- cd $TRAVIS_BUILD_DIR/tests
+- git clone --branch 7.x-1.x https://git.drupal.org/project/scheduler.git $TRAVIS_BUILD_DIR/scheduler
+- cd $TRAVIS_BUILD_DIR/scheduler/tests
 - drupal-ti --include "$TRAVIS_BUILD_DIR/drupal_ti/before/before_install.sh"
 - drupal-ti before_install
 install:
