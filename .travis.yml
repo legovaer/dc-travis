@@ -14,6 +14,7 @@ matrix:
   fast_finish: true
 env:
   global:
+  - TEST_VAR="NOTUPDATED"
   - PATH="$PATH:$HOME/.composer/vendor/bin"
   - DRUPAL_TI_MODULE_NAME="scheduler"
   - DRUPAL_TI_SIMPLETEST_GROUP="Scheduler"
@@ -46,6 +47,7 @@ mysql:
   username: root
   encoding: utf8
 before_install:
+- echo "We found $TEST_VAR"
 - composer self-update
 # Installing drupal_ti manually as my pull request hasn't been merged yet.
 - mkdir -p "$HOME/.composer/vendor/bin"
