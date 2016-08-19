@@ -14,7 +14,6 @@ matrix:
   fast_finish: true
 env:
   global:
-  - TEST_VAR="NOTUPDATED"
   - PATH="$PATH:$HOME/.composer/vendor/bin"
   - DRUPAL_TI_MODULE_NAME="scheduler"
   - DRUPAL_TI_SIMPLETEST_GROUP="Scheduler"
@@ -42,6 +41,7 @@ env:
 
   matrix:
   - DRUPAL_TI_RUNNERS="simpletest"
+  - TEST_VAR="NOTUPDATED"
 mysql:
   database: drupal_travis_db
   username: root
@@ -56,14 +56,14 @@ before_install:
 - cd drupal_ti/
 - composer install
 - ln -sf $HOME/drupal_ti/drupal-ti "$HOME/.composer/vendor/bin"
-- git clone --branch 7x-auto-merge https://github.com/legovaer/scheduler.git $TRAVIS_BUILD_DIR/scheduler
-- cd $TRAVIS_BUILD_DIR/scheduler/tests
-- drupal-ti --include "$TRAVIS_BUILD_DIR/scheduler/drupal_ti/before/before_install.sh"
+- git clone --branch 7.x-1.x https://git.drupal.org/project/$DRUPAL_TI_MODULE_NAME.git $TRAVIS_BUILD_DIR/$DRUPAL_TI_MODULE_NAME
+- cd $TRAVIS_BUILD_DIR/$DRUPAL_TI_MODULE/tests
+#- drupal-ti --include "$TRAVIS_BUILD_DIR/scheduler/drupal_ti/before/before_install.sh"
 - drupal-ti before_install
 install:
 - drupal-ti install
 before_script:
-- drupal-ti --include "$TRAVIS_BUILD_DIR/scheduler/drupal_ti/before/before_script.sh"
+#- drupal-ti --include "$TRAVIS_BUILD_DIR/scheduler/drupal_ti/before/before_script.sh"
 - drupal-ti before_script
 script:
 - drupal-ti script
