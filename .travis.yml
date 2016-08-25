@@ -41,7 +41,6 @@ env:
 
   matrix:
   - DRUPAL_TI_RUNNERS="simpletest"
-  - TEST_VAR="NOTUPDATED"
 mysql:
   database: drupal_travis_db
   username: root
