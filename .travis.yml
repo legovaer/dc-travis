@@ -46,9 +46,7 @@ mysql:
   username: root
   encoding: utf8
 before_install:
-- echo "We found $TEST_VAR"
 - composer self-update
-# Installing drupal_ti manually as my pull request hasn't been merged yet.
 - mkdir -p "$HOME/.composer/vendor/bin"
 - cd $HOME
 - git clone --branch travis-add-coverage-support https://github.com/legovaer/drupal_ti
@@ -56,6 +54,7 @@ before_install:
 - composer install
 - ln -sf $HOME/drupal_ti/drupal-ti "$HOME/.composer/vendor/bin"
 - git clone --branch 7.x-1.x https://git.drupal.org/project/$DRUPAL_TI_MODULE_NAME.git $TRAVIS_BUILD_DIR/$DRUPAL_TI_MODULE_NAME
+- echo "Test"
 - [ -d "$TRAVIS_BUILD_DIR/$DRUPAL_TI_MODULE/tests" ] && cd $TRAVIS_BUILD_DIR/$DRUPAL_TI_MODULE/tests
 #- drupal-ti --include "$TRAVIS_BUILD_DIR/scheduler/drupal_ti/before/before_install.sh"
 - drupal-ti before_install
