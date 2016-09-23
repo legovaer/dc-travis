@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/travis/build/legovaer/drupal-7/drupal/modules/field</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/home/travis/build/legovaer/drupal-7/drupal/modules</a></li>
+        <li><a href="index.html">field</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="field.attach.inc.html#11">FieldValidationException</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#29">FieldInfo</a></td><td class="text-right">37%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="field.info.class.inc.html#29">FieldInfo</a></td><td class="text-right">1420</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="field.info.class.inc.html#526"><abbr title="FieldInfo::prepareInstance">prepareInstance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#575"><abbr title="FieldInfo::prepareInstanceWidget">prepareInstanceWidget</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#609"><abbr title="FieldInfo::prepareInstanceDisplay">prepareInstanceDisplay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.attach.inc.html#26"><abbr title="FieldValidationException::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#306"><abbr title="FieldInfo::getFieldById">getFieldById</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#163"><abbr title="FieldInfo::getFields">getFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#209"><abbr title="FieldInfo::getInstances">getInstances</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#350"><abbr title="FieldInfo::getBundleInstances">getBundleInstances</abbr></a></td><td class="text-right">43%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#649"><abbr title="FieldInfo::prepareExtraFields">prepareExtraFields</abbr></a></td><td class="text-right">48%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#268"><abbr title="FieldInfo::getField">getField</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#123"><abbr title="FieldInfo::getFieldMap">getFieldMap</abbr></a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="field.info.class.inc.html#451"><abbr title="FieldInfo::getBundleExtraFields">getBundleExtraFields</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="field.info.class.inc.html#209"><abbr title="FieldInfo::getInstances">getInstances</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="field.info.class.inc.html#526"><abbr title="FieldInfo::prepareInstance">prepareInstance</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="field.info.class.inc.html#163"><abbr title="FieldInfo::getFields">getFields</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="field.info.class.inc.html#350"><abbr title="FieldInfo::getBundleInstances">getBundleInstances</abbr></a></td><td class="text-right">43</td></tr>
+       <tr><td><a href="field.info.class.inc.html#306"><abbr title="FieldInfo::getFieldById">getFieldById</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="field.info.class.inc.html#609"><abbr title="FieldInfo::prepareInstanceDisplay">prepareInstanceDisplay</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="field.info.class.inc.html#649"><abbr title="FieldInfo::prepareExtraFields">prepareExtraFields</abbr></a></td><td class="text-right">16</td></tr>
+       <tr><td><a href="field.info.class.inc.html#575"><abbr title="FieldInfo::prepareInstanceWidget">prepareInstanceWidget</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="field.info.class.inc.html#123"><abbr title="FieldInfo::getFieldMap">getFieldMap</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="field.info.class.inc.html#451"><abbr title="FieldInfo::getBundleExtraFields">getBundleExtraFields</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="field.info.class.inc.html#268"><abbr title="FieldInfo::getField">getField</abbr></a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 3.3.3</a> using <a href="https://secure.php.net/" target="_top">PHP 5.6.26</a> at Fri Sep 23 15:05:18 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([1,0,0,0,1,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([7,0,0,0,0,2,0,0,2,1,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"field.attach.inc.html#11\">FieldValidationException<\/a>"],[37.354085603113,74,"<a href=\"field.info.class.inc.html#29\">FieldInfo<\/a>"],[100,0,"<a href=\"field.module.html#13\">FieldException<\/a>"],[100,0,"<a href=\"field.module.html#279\">FieldUpdateForbiddenException<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"field.attach.inc.html#26\">FieldValidationException::__construct<\/a>"],[100,1,"<a href=\"field.info.class.inc.html#97\">FieldInfo::flush<\/a>"],[77.777777777778,5,"<a href=\"field.info.class.inc.html#123\">FieldInfo::getFieldMap<\/a>"],[0,7,"<a href=\"field.info.class.inc.html#163\">FieldInfo::getFields<\/a>"],[0,9,"<a href=\"field.info.class.inc.html#209\">FieldInfo::getInstances<\/a>"],[75,4,"<a href=\"field.info.class.inc.html#268\">FieldInfo::getField<\/a>"],[0,5,"<a href=\"field.info.class.inc.html#306\">FieldInfo::getFieldById<\/a>"],[43.75,13,"<a href=\"field.info.class.inc.html#350\">FieldInfo::getBundleInstances<\/a>"],[88.235294117647,5,"<a href=\"field.info.class.inc.html#451\">FieldInfo::getBundleExtraFields<\/a>"],[100,3,"<a href=\"field.info.class.inc.html#493\">FieldInfo::prepareField<\/a>"],[0,8,"<a href=\"field.info.class.inc.html#526\">FieldInfo::prepareInstance<\/a>"],[0,2,"<a href=\"field.info.class.inc.html#575\">FieldInfo::prepareInstanceWidget<\/a>"],[0,4,"<a href=\"field.info.class.inc.html#609\">FieldInfo::prepareInstanceDisplay<\/a>"],[48.148148148148,8,"<a href=\"field.info.class.inc.html#649\">FieldInfo::prepareExtraFields<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
